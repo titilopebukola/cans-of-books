@@ -1,0 +1,382 @@
+html {
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --wht: #f8f8f8;
+  --blk: #2b2b2b;
+  --grn1: #5e7361;
+  --grn2: #c2c5a7;
+  --grn3: #c5d6a5;
+  --grn4: #f0ebc1;
+  --gry1: darkslategrey;
+  --gry2: grey;
+  --gry3: grey;
+  --blu: darkslateblue;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before {
+  box-sizing: border-box;
+}
+
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+  color: var(--black);
+  background-color: var(--wht);
+}
+
+.wrapper {
+  padding: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.book-wrapper {
+  margin-bottom: 10px;
+  background-color: var(--grn1);
+  max-width: 250px;
+  border-style: double;
+  border-color: silver;
+  box-shadow: var(--blu);
+  color: var(--wht);
+}
+
+.filter-wrapper {
+  padding: 30px;
+  border: none;
+  font-size: 1rem;
+}
+.filter-wrapper p {
+  text-align: center;
+  color: #f8f8f8;
+}
+.filter-wrapper h3 {
+  text-align: center;
+}
+.book-form {
+  margin-bottom: 30px;
+  padding: 30px;
+  font-size: 2rem;
+  border-style: none;
+}
+
+h2 {
+  padding: 30px;
+}
+h1 {
+  text-align: center;
+}
+@media (min-width: 420px) {
+  .book-wrapper {
+    font-size: 1rem;
+  }
+
+  .logo-strapline {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-nav {
+    display: flex;
+  }
+}
+
+/***********************
+ General Styling / elements
+************************/
+
+.thin {
+  font-weight: 300;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*************
+Images
+**************/
+
+img {
+  width: 100%;
+  display: block;
+}
+
+/**************
+buttons / links / li
+***************/
+
+/**************
+typography
+***************/
+
+/************** 
+Layout
+***************/
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+/*************** 
+Media Queries
+****************/
+
+/**********************
+Burger Menu Styles
+***********************/
+
+#page-wrap {
+  text-align: center;
+
+  /* Prevent sidebar from showing a scrollbar on page */
+  overflow: auto;
+}
+
+/* Individual item */
+.bm-item {
+  display: inline-block;
+
+  /* Our sidebar item styling */
+  padding: 1rem 0;
+  margin-bottom: 0 !important;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: var(--wht);
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+/* Change color on hover */
+.bm-item:hover {
+  color: var(--grn4);
+}
+
+/* The rest copied directly from react-burger-menu docs */
+
+/* Position and sizing of burger button */
+.bm-burger-button {
+  position: absolute;
+  width: 30px;
+  height: 24px;
+  right: 36px;
+  top: 38px;
+}
+
+/* Color/shape of burger icon bars */
+.bm-burger-bars {
+  background: var(--grn4);
+  border-radius: 2px;
+  height: 14% !important;
+}
+
+.bm-burger-bars-hover {
+  background-color: var(--grn3) !important;
+  opacity: 1 !important;
+}
+
+/* Position and sizing of clickable cross button */
+.bm-cross-button {
+  height: 54px !important;
+  width: 54px !important;
+  top: -44px !important;
+  right: 39px !important;
+}
+
+/* Color/shape of close button cross */
+.bm-cross {
+  background: var(--grn4);
+  height: 24px !important;
+  width: 4px !important;
+}
+
+.bm-cross-button:hover .bm-cross {
+  background-color: var(--grn3);
+}
+
+/* General sidebar styles */
+
+.bm-menu-wrap {
+  background: var(--blu);
+  /* border-radius: 0 0 0 140px; */
+}
+
+.bm-menu {
+  background: var(--blu);
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+  position: relative;
+  top: -100px;
+  /* bottom: -70px; */
+  /* border-radius: 0 0 0 80px; */
+  height: calc(100vh+70px) !important;
+}
+
+/* Morph shape necessary with bubble or elastic */
+.bm-morph-shape {
+  fill: #373a47;
+}
+
+/* Wrapper for item list */
+.bm-item-list {
+  color: #b8b7ad;
+  margin-top: 24px;
+}
+
+/* Styling of overlay */
+.bm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 420px) {
+  .bm-burger-button {
+    top: 50px;
+  }
+  .bm-cross-button {
+    top: -46px !important;
+  }
+}
+
+@media (min-width: 800px) {
+  .bm-burger-button {
+    display: none;
+  }
+}
+
+/*************
+General styling / Elements
+**************/
+
+/*************
+Images
+**************/
+
+/*************
+Buttons / Links / li / inputs
+**************/
+
+.header-nav-list-item {
+  font-size: 1.25rem;
+  color: var(--grn4);
+}
+
+.header-nav-list-item:hover {
+  color: var(--wht);
+}
+
+/*************
+Typography
+**************/
+
+.logo {
+  font-size: 1.25rem;
+  color: var(--grn4);
+  line-height: 1;
+}
+
+.logo-strapline {
+  font-size: 0.625rem;
+  color: var(--grn4);
+  letter-spacing: 0.1em;
+}
+
+/*************
+Layout
+**************/
+
+.header {
+  background-color: var(--blu);
+  padding: 2rem 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.header-nav {
+  display: none;
+}
+
+.header-nav-link {
+  position: relative;
+  top: 2px;
+  margin-left: 2rem;
+}
+
+/*************
+Media Queries
+**************/
+
+@media (min-width: 420px) {
+  .logo {
+    font-size: 2rem;
+  }
+
+  .logo-strapline {
+    font-size: 1rem;
+  }
+  footer {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .header-nav {
+    display: flex;
+  }
+}
+
+/* footer */
+footer {
+  background-color: var(--blk);
+  padding: 2rem 0;
+  color: var(--wht);
+  font-size: 16px;
+}
+
+/* delete span */
+span {
+  display: inline-block;
+  color: white;
+  background-color: rgb(192, 12, 12);
+  cursor: pointer;
+}
